@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Peralta&display=swap');
+html;body{
+    margin:0;
+    padding:0;
+  box-sizing:border-box;
+}
+*{
+    margin:0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    background-color: #743118;
+    position: relative;
+    background-image: url(images/tree.png);
+    background-repeat: no-repeat;
+    background-size: 590px;
+    background-position: right bottom;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 2px 2px 12px rgba(0, 0,0, 0.05);
+    box-sizing: border-box;
+    z-index: 1;
+    padding: 10px 50px;
+    color: #743118;
+}
+@media only screen and (max-width:850px){
+    .menu-btn{
+        display: block;
+    }
+    .navbar{
+        padding:0;
+    }
+    .logo {
+        position: absolute;
+        top:30px;
+        left:30px;
+
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        background: rgb(43, 43, 90);
+        margin-top: -900px;
+        transition: all 0.5s ease;
+    }
+    .mobile-menu {
+        margin-top: 0px;
+        border-bottom-right-radius: 30%;
+    }
+    .nav-links li {
+        margin: 30px auto;
+    }
+}
+.menu{
+    display: flex;
+}
+.menu li a{
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 25px;
+}
+.siteName{
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+}
+.logo img{
+   width: 113px ;
+}
+.menu li a:hover,.active{
+    background-color: #29292929;
+    font-weight: 700;
+    transition: all ease 0.4s;
+}
+.hero{
+    width: 650px;
+    position: absolute;
+    left: 10%;
+    top: 33%;
+    transition: none;
+    line-height: 60px;
+}
+.hero p:nth-child(1),.hero .details{
+    color: #fff;
+    font-size: 20px;
+}
+.details{
+    line-height: 30px !important;
+}
+.hero h1{
+    font-size: 40px;
+    margin: 0;
+    letter-spacing: 3px;
+    color: #fff;
+}
+.hero span{
+    color:orangered ;
+}
+.download{
+    width: 200px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orangered;
+    color: #fff;
+    border-radius: 4px;
+    margin-top: 20px;
+
+}
+.download:hover{
+    background-color: rgb(0, 0, 0);
+    transition: all ease 0.4s;
+}
+.heading{
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3rem;
+    color: black;
+}
+.heading span{
+    background-color: orangered;
+    color: white;
+    display: inline-block;
+    padding: 0.5rem 3rem;
+    border-radius: 4px;
+}
+.featured .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    grid-area: 1.5rem;
+}
+.featured .box-container .box{
+    padding: 1rem 1rem;
+    background-color: #fff;
+    outline: .1rem solid  rgba(0, 0,0, 0.1);
+    outline-offset: -1rem;
+    text-align: center;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0,0, 0.1);
+}
+.featured .box-container .box:hover{
+    outline: .2rem solid  black;
+    outline-offset: 0rem;
+}
+.featured .box-container .box img{
+margin: 1rem 0;
+height: 15rem;
+}
+.featured .box-container .box h3{
+    font-size: 2rem;
+    line-height: 1.8;
+    color: black;
+}
+.featured .box-container .box p{
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #666;
+    padding: 1rem 0;
+}
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    border: .2rem solid black;
+    color: black;
+    cursor: pointer;
+    background: none;
+}
+.btn:hover{
+    background-color: orangered;
+    color: white;
+    border: .2rem solid white;
+}
+.books .book-slider{
+    padding: 1rem;
+}
+.books .book-slider:first-child{
+    margin-bottom: 2rem;
+}
+.books .book-slider .box{
+    background-color: #fff;
+    border-radius: .5rem;
+    text-align: center;
+    padding: 3rem 2rem;
+    outline: .1rem solid rgba(0, 0,0, 0.1);
+    outline-offset: -1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0,0, 0.1);
+    transition: .2s linear;
+}
+.books .book-slider .box:hover{
+    outline-offset: 0rem;
+    outline: .2rem solid  black;
+}
+.books .book-slider .box img{
+    height: 320px;
+}
+.books .book-slider .box h3{
+    font-size:32px ;
+    color: black;
+}
+.books .book-slider .box .price{
+    font-size: 32px;
+    color: #666;
+    padding: 8px 0;
+}
+.books .book-slider .box .stars i{
+    font-size: 28px;
+    color: orangered;
+    padding: 8px 0;
+}
+.wrapp{ 
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    grid-area: 24px;
+}
+.books .book-slider .box a{
+    padding: 10px 15px;
+    color: black;
+    font-size: 25px;
+    text-align: center;
+}
+#foot{
+    background-color:rgb(68, 63, 63);
+}
+@media(min-width:300px) and (max-width:590px){
+    #bug{
+        display: none;
+    }
+}
